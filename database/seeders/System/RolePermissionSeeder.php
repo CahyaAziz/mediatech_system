@@ -59,6 +59,7 @@ class RolePermissionSeeder extends Seeder
                 'commissions.read', 'commissions.read_all', 'commissions.export',
             ],
             'Admin CMS' => [
+                'dashboard.read',
                 'cms.read', 'cms.create', 'cms.update', 'cms.soft_delete', 'cms.restore', 'cms.export',
             ],
         ];
@@ -74,6 +75,21 @@ class RolePermissionSeeder extends Seeder
                     ['granted_by' => null, 'granted_at' => now()]
                 );
             }
+        }
+
+        // Bersihkan grant lama yang mungkin pernah diberikan ke role selain Super Admin.
+        // Izin ini tidak dapat didelegasikan melalui UI Role Management.
+        $privilegedPermissionIds = $permissions
+            ->filter(fn ($permission) => $permission->module_code === 'role_management'
+                || $permission->permission_code === 'users.assign_roles')
+            ->pluck('permission_id')
+            ->all();
+
+        if ($privilegedPermissionIds !== []) {
+            DB::table('role_permissions')
+                ->whereIn('permission_id', $privilegedPermissionIds)
+                ->where('role_id', '<>', $this->roleId('Super Admin'))
+                ->delete();
         }
     }
 }

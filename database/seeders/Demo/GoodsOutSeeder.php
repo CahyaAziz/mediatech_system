@@ -14,7 +14,7 @@ class GoodsOutSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $warehouseUserId = $this->userId('dzaky.julian@meditech.co.id');
+        $warehouseUserId = $this->userId('jakoy@meditech.co.id');
         $issues = [
             ['GI-2026-058', 'SO-2026-031', '2026-10-17', 'Pengiriman sebagian 10 unit Kamera CCTV Hikvision 2MP.', ['PRD-011' => 10]],
             ['GI-2026-057', 'SO-2026-030', '2026-10-12', 'Pengiriman 5 unit Projector NEC NP-M350X.', ['PRD-010' => 5]],

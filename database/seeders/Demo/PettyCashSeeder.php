@@ -14,8 +14,8 @@ class PettyCashSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $financeId = $this->userId('ica.apriyanti@meditech.co.id');
-        $approverId = $this->userId('cahya.aziz@meditech.co.id');
+        $financeId = $this->userId('ica@meditech.co.id');
+        $approverId = $this->userId('cahya@meditech.co.id');
         $rows = [
             ['PC-2026-001','2026-10-20 09:00:00','Pengeluaran','Operasional kantor','Pembelian alat tulis',450000,'nota-atk.svg','2026-10-20 09:30:00','BNK-001'],
             ['PC-2026-002','2026-10-21 09:00:00','Pemasukan','Pengembalian biaya','Pengembalian uang muka operasional',250000,'bukti-pengembalian.svg','2026-10-21 09:30:00','BNK-001'],

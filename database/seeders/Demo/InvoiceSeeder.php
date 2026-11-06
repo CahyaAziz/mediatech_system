@@ -14,7 +14,7 @@ class InvoiceSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $financeId = $this->userId('ica.apriyanti@meditech.co.id');
+        $financeId = $this->userId('ica@meditech.co.id');
         $invoices = [
             ['INV-2026-024','SO-2026-029','2026-10-16','2026-10-30','Termin','Partially Paid','Invoice untuk pengiriman bertahap.'],
             ['INV-2026-023','SO-2026-031','2026-10-15','2026-10-29','Termin','Paid','Pembayaran telah tervalidasi.'],

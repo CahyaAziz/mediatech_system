@@ -14,7 +14,7 @@ class CommissionRuleSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $creatorId = $this->userId('mirachel.cindejona@meditech.co.id');
+        $creatorId = $this->userId('mirachel@meditech.co.id');
         $rules = [
             ['Penjualan di bawah Rp10 juta', 'sales', 0, 9999999.99, 'percentage', 1, 10],
             ['Penjualan minimal Rp10 juta', 'sales', 10000000, null, 'percentage', 2, 20],
