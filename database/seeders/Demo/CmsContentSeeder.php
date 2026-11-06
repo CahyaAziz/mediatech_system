@@ -14,7 +14,7 @@ class CmsContentSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $adminId = $this->userId('anaqi.ahza@meditech.co.id');
+        $adminId = $this->userId('anaqi@meditech.co.id');
         $pages = [
             ['slug' => 'about-us', 'title' => 'Tentang Kami'],
             ['slug' => 'services', 'title' => 'Layanan'],

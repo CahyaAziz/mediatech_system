@@ -14,7 +14,7 @@ class CommissionSimulationSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $salespersonId = $this->userId('rafli.ahmad@meditech.co.id');
+        $salespersonId = $this->userId('rafli@meditech.co.id');
         $rules = DB::table('commission_rules')->where('is_active', true)->orderBy('priority')->get();
 
         $orders = DB::table('sales_orders')->whereNotNull('salesperson_user_id')->get();

@@ -14,7 +14,7 @@ class PaymentSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $recordedBy = $this->userId('ica.apriyanti@meditech.co.id');
+        $recordedBy = $this->userId('ica@meditech.co.id');
         $validatedBy = $recordedBy; // Prototype menampilkan Finance sebagai pencatat sekaligus validator payment demo.
         $payments = [
             ['PAY-2026-041','INV-2026-024','2026-10-16','Transfer bank',30000000,'BNK-001','TRF-161026-041','Validated','2026-10-16 11:15:00','Pembayaran sebagian customer.'],

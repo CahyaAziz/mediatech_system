@@ -15,7 +15,7 @@ class GoodsReceiptSeeder extends Seeder
         if (!$this->isDemoEnvironment()) return;
 
         $supplierId = $this->supplierId('SUP-0003');
-        $warehouseOperator = $this->userId('dzaky.julian@meditech.co.id');
+        $warehouseOperator = $this->userId('jakoy@meditech.co.id');
         $receipts = [
             ['GR-2026-099', 'WH-001', '2026-10-01', [
                 'PRD-001' => 42, 'PRD-002' => 9, 'PRD-004' => 2, 'PRD-005' => 6, 'PRD-008' => 5,

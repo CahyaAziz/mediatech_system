@@ -14,7 +14,7 @@ class CompanyDocumentSettingSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $userId = DB::table('users')->where('email', 'mirachel.cindejona@meditech.co.id')->value('user_id');
+        $userId = DB::table('users')->where('email', 'mirachel@meditech.co.id')->value('user_id');
         foreach (['quotation', 'sales_order', 'invoice'] as $type) {
             DB::table('company_document_settings')->updateOrInsert(
                 ['document_type' => $type],

@@ -14,7 +14,7 @@ class QuotationSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $salesId = $this->userId('rafli.ahmad@meditech.co.id');
+        $salesId = $this->userId('rafli@meditech.co.id');
         $rows = [
             ['QT-2026-018','CUS-0007','2026-10-18','2026-11-17','Pending Approval','', [['PRD-001',30,3],['PRD-017',30,0]]],
             ['QT-2026-017','CUS-0003','2026-10-17','2026-11-16','Approved','', [['PRD-011',16,0],['PRD-012',1,0],['PRD-015',16,0]]],

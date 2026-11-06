@@ -14,7 +14,7 @@ class SalesOrderSeeder extends Seeder
     {
         if (!$this->isDemoEnvironment()) return;
 
-        $salesId = $this->userId('rafli.ahmad@meditech.co.id');
+        $salesId = $this->userId('rafli@meditech.co.id');
         $orders = [
             ['SO-2026-031','QT-2026-017','2026-10-17','2026-11-03','Processing','284/GA/IX/2026.TRIM','KURIR','Pengiriman dilakukan bertahap.'],
             ['SO-2026-030','QT-2026-011','2026-10-12','2026-10-18','Completed','283/GA/IX/2026.TRIM','KURIR','Pengiriman selesai.'],
