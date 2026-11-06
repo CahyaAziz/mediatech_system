@@ -20,7 +20,7 @@ class PermissionSeeder extends Seeder
             'petty_cash' => ['read', 'create', 'update', 'soft_delete', 'restore', 'permanent_delete', 'approve', 'post', 'reverse', 'export'],
             'inventory' => ['read', 'create', 'update', 'post', 'reverse', 'export'],
             'master_data' => ['read', 'create', 'update', 'soft_delete', 'restore', 'permanent_delete', 'export'],
-            'users' => ['read', 'create', 'update', 'export'],
+            'users' => ['read', 'create', 'update', 'assign_roles', 'export'],
             'cms' => ['read', 'create', 'update', 'soft_delete', 'restore', 'permanent_delete', 'export'],
             'audit' => ['read', 'export'],
             'profit' => ['read', 'export'],
@@ -33,7 +33,7 @@ class PermissionSeeder extends Seeder
             'update' => 'Mengubah data', 'delete' => 'Menghapus role', 'soft_delete' => 'Menghapus sementara',
             'restore' => 'Memulihkan data', 'permanent_delete' => 'Menghapus permanen', 'cancel' => 'Membatalkan transaksi',
             'cancel_override' => 'Membatalkan di luar grace period', 'post' => 'Memposting transaksi',
-            'reverse' => 'Membalik/mengoreksi transaksi', 'approve' => 'Menyetujui atau memvalidasi', 'export' => 'Mengekspor data',
+            'reverse' => 'Membalik/mengoreksi transaksi', 'approve' => 'Menyetujui atau memvalidasi', 'export' => 'Mengekspor data', 'assign_roles' => 'Menetapkan role pengguna',
         ];
 
         foreach ($modules as $module => $operations) {
@@ -45,8 +45,10 @@ class PermissionSeeder extends Seeder
                         'module_code' => $module,
                         'operation_code' => $operation,
                         'description' => ($labels[$operation] ?? $operation) . ' pada modul ' . ucwords(str_replace('_', ' ', $module)),
-                        'is_assignable' => true,
-                        'is_destructive_operation' => in_array($operation, ['delete', 'soft_delete', 'permanent_delete', 'cancel', 'cancel_override', 'reverse'], true),
+                        // Penetapan role dan pengelolaan role adalah izin istimewa;
+                        // hanya Super Admin menerimanya melalui RolePermissionSeeder.
+                        'is_assignable' => !(($module === 'users' && $operation === 'assign_roles') || $module === 'role_management'),
+                        'is_destructive_operation' => in_array($operation, ['delete', 'soft_delete', 'permanent_delete', 'cancel', 'cancel_override', 'reverse', 'assign_roles'], true),
                         'is_active' => true,
                     ]
                 );
