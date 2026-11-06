@@ -18,16 +18,16 @@ class DemoUserSeeder extends Seeder
             return;
         }
 
-        $password = env('DEMO_USER_PASSWORD', 'ChangeMe123!');
+        $password = env('DEMO_USER_PASSWORD', 'Pass1234!');
         $users = [
-            ['name' => 'Mirachel Cindejona', 'email' => 'mirachel.cindejona@meditech.co.id', 'role' => 'Super Admin', 'active' => true, 'last_login_at' => now()->subMinutes(2)],
-            ['name' => 'Rafli Ahmad', 'email' => 'rafli.ahmad@meditech.co.id', 'role' => 'Sales', 'active' => true, 'last_login_at' => now()->subMinutes(10)],
-            ['name' => 'Regina Nur Fadhilah', 'email' => 'regina.fadhilah@meditech.co.id', 'role' => 'Manager', 'active' => true, 'last_login_at' => now()->subMinutes(32)],
-            ['name' => 'Dzaky Julian', 'email' => 'dzaky.julian@meditech.co.id', 'role' => 'Warehouse', 'active' => true, 'last_login_at' => now()->subHour()],
-            ['name' => 'Ica Apriyanti', 'email' => 'ica.apriyanti@meditech.co.id', 'role' => 'Finance', 'active' => true, 'last_login_at' => now()->subMinutes(18)],
-            ['name' => 'Cahya Abdul Aziz', 'email' => 'cahya.aziz@meditech.co.id', 'role' => 'Finance Manager/Director', 'active' => true, 'last_login_at' => now()->subHours(2)],
-            ['name' => 'Anaqi Ahza', 'email' => 'anaqi.ahza@meditech.co.id', 'role' => 'Admin CMS', 'active' => true, 'last_login_at' => now()->subDay()],
-            ['name' => 'Nugra Hasahatan', 'email' => 'nugra.hasahatan@meditech.co.id', 'role' => 'Sales', 'active' => false, 'last_login_at' => now()->subDays(3)],
+            ['name' => 'Mirachel Cindejona', 'email' => 'mirachel@meditech.co.id', 'role' => 'Super Admin', 'active' => true, 'last_login_at' => now()->subMinutes(2)],
+            ['name' => 'Rafli Ahmad', 'email' => 'rafli@meditech.co.id', 'role' => 'Sales', 'active' => true, 'last_login_at' => now()->subMinutes(10)],
+            ['name' => 'Regina Nur Fadhilah', 'email' => 'regina@meditech.co.id', 'role' => 'Manager', 'active' => true, 'last_login_at' => now()->subMinutes(32)],
+            ['name' => 'Dzaky Julian', 'email' => 'jakoy@meditech.co.id', 'role' => 'Warehouse', 'active' => true, 'last_login_at' => now()->subHour()],
+            ['name' => 'Ica Apriyanti', 'email' => 'ica@meditech.co.id', 'role' => 'Finance', 'active' => true, 'last_login_at' => now()->subMinutes(18)],
+            ['name' => 'Cahya Abdul Aziz', 'email' => 'cahya@meditech.co.id', 'role' => 'Finance Manager/Director', 'active' => true, 'last_login_at' => now()->subHours(2)],
+            ['name' => 'Anaqi Ahza', 'email' => 'anaqi@meditech.co.id', 'role' => 'Admin CMS', 'active' => true, 'last_login_at' => now()->subDay()],
+            ['name' => 'Nugra Hasahatan', 'email' => 'nugi@meditech.co.id', 'role' => 'Sales', 'active' => false, 'last_login_at' => now()->subDays(3)],
         ];
 
         foreach ($users as $data) {

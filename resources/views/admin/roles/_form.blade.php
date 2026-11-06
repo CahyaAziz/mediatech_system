@@ -76,8 +76,8 @@
                     <h2 class="text-[13px] font-extrabold text-[#262626]">Hak akses per modul</h2>
                     <p class="mt-1 text-[10px] text-[#737373]">
                         @if ($role->is_super_admin)
-                            Seluruh hak akses sistem untuk role Super Admin. 
-                            @else  
+                            Seluruh hak akses sistem untuk role Super Admin.
+                        @else
                             Centang operasi yang boleh dilakukan oleh pengguna dengan role ini.
                         @endif
                     </p>
