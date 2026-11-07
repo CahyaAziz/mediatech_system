@@ -2,7 +2,7 @@
     class="sticky top-0 z-20 flex h-[68px] shrink-0 items-center justify-between gap-3 border-b border-[#e8eaf0] bg-white px-[15px] sm:px-[22px] xl:px-[30px]">
     <div class="flex min-w-0 items-center gap-[13px]">
         <label for="sidebar-toggle"
-            class="grid h-9 w-9 shrink-0 cursor-pointer place-items-center rounded-lg border border-[#e5e5e5] bg-white text-[#525252] transition hover:bg-[#f5f6fb] hover:text-[#0d21a1] min-[721px]:hidden"
+            class="grid h-9 w-9 shrink-0 cursor-pointer place-items-center rounded-lg border border-neutral-200 bg-white text-neutral-500 transition hover:bg-neutral-50 hover:text-primary-500 min-[768px]:hidden"
             aria-label="Buka navigasi">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
                 stroke-linecap="round">

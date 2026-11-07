@@ -5,11 +5,29 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+/* Font lokal sesuai pedoman /agent: Montserrat (heading), Inter (body) */
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/montserrat/Montserrat-Variable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter-Variable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme {
     --font-sans:
-        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Inter", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
+    --font-heading: "Montserrat", "Inter", ui-sans-serif, system-ui, sans-serif;
 
     /* PRIMARY */
 
@@ -50,4 +68,16 @@
     --color-neutral-800: #262626;
     --color-neutral-900: #171717;
     --color-neutral-950: #000000;
+
+    /* SEMANTIC (tier 500 per pedoman /agent) */
+    --color-success-500: #00C951;
+    --color-warning-500: #EFB100;
+    --color-error-500: #FB2C36;
+
+    /* BG tint untuk badge */
+    --color-success-50: #eaf7f0;
+    --color-warning-50: #fdf5dc;
+    --color-error-50: #fff0ef;
 }
+
+

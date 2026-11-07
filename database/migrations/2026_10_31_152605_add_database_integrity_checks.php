@@ -14,6 +14,10 @@ return new class extends Migration
     {
         // MySQL 8.0.16+ enforces CHECK constraints. Keep business-level checks
         // in Services too; database checks are a final integrity guard.
+        // Skip on SQLite (testing) — CHECK syntax differs.
+        if (DB::getDriverName() === 'sqlite') {
+            return;
+        }
         DB::statement("ALTER TABLE quotation_items ADD CONSTRAINT chk_quotation_items_quantity CHECK (quantity > 0)");
         DB::statement("ALTER TABLE sales_order_items ADD CONSTRAINT chk_sales_order_items_quantity CHECK (quantity_ordered > 0 AND quantity_delivered >= 0 AND quantity_delivered <= quantity_ordered)");
         DB::statement("ALTER TABLE goods_receipt_items ADD CONSTRAINT chk_goods_receipt_items_quantity CHECK (quantity_received > 0)");
@@ -38,6 +42,9 @@ return new class extends Migration
      */
     public function down(): void
     {
+        if (DB::getDriverName() === 'sqlite') {
+            return;
+        }
         DB::statement("ALTER TABLE stock_movements DROP CHECK chk_stock_movement_source");
         DB::statement("ALTER TABLE cash_transactions DROP CHECK chk_cash_transactions_amount");
         DB::statement("ALTER TABLE sales_orders DROP CHECK chk_sales_orders_totals");

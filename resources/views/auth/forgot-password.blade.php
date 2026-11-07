@@ -22,9 +22,10 @@
         <div class="mt-7 flex items-center gap-3"><img src="{{ asset('images/meditech-logo.jpg') }}" alt="Meditech"
                 class="h-10 w-14 rounded bg-white object-contain">
             <div>
-                <p class="font-['Plus_Jakarta_Sans'] text-lg font-extrabold"><span
-                        class="text-[#0d21a1]">Medi</span><span class="text-[#eec643]">Tech</span></p>
-                <p class="text-[9px] font-bold uppercase tracking-widest text-[#737373]">Business System</p>
+                <p class="font-heading text-[20px] leading-7 font-bold"><span
+class="text-secondary-500">Medi</span><span 
+class="text-primary-500">Tech</span></p>
+                <p class="text-[9px] font-bold uppercase tracking-widest text-neutral-500">Business System</p>
             </div>
         </div>
         <h1 class="mt-8 font-['Plus_Jakarta_Sans'] text-2xl font-extrabold text-[#171717]">Lupa kata sandi?</h1>
