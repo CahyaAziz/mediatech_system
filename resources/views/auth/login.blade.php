@@ -4,19 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0d21a1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Login | Meditech System</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('styles')
 </head>
 
-<body class="min-h-screen bg-[#f7f8fb] font-['Inter'] text-[#262626] antialiased">
-    <main
-        class="relative grid min-h-screen place-items-center overflow-hidden px-[14px] py-6 sm:px-[22px] sm:py-[34px]">
+<body class="min-h-screen bg-[#f7f8fb] font-sans text-[#262626] antialiased">
+    <main class="relative grid min-h-screen place-items-center overflow-hidden px-[14px] py-6 sm:px-[22px] sm:py-[34px]">
         <div aria-hidden="true"
             class="pointer-events-none absolute -right-32 -top-48 h-[400px] w-[400px] rounded-full bg-[#0d21a1]/[0.055]">
         </div>
@@ -39,9 +34,9 @@
                     <img src="{{ asset('images/meditech-logo.jpg') }}" alt="Logo Meditech Cipta Inovasi"
                         class="h-[42px] w-[60px] rounded-[7px] bg-white object-contain p-[2px]">
                     <div>
-                        <div
-                            class="font-heading text-[20px] leading-7 font-bold tracking-[-0.5px]">
-                            <span class="text-secondary-500">Medi</span><span class="text-primary-500">Tech</span></div>
+                        <div class="font-heading text-[20px] leading-7 font-bold tracking-[-0.5px]">
+                            <span class="text-secondary-500">Medi</span><span class="text-primary-500">Tech</span>
+                        </div>
                         <div class="mt-1 text-[10px] font-bold uppercase tracking-[1.8px] text-white/65">Business System
                         </div>
                     </div>
@@ -50,9 +45,10 @@
                 <div class="relative z-10 mt-auto pt-[78px]">
                     <div
                         class="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[1.5px] text-[#f5d96e]">
-                        <span class="h-[2px] w-[22px] rounded bg-[#eec643]"></span>Meditech System</div>
+                        <span class="h-[2px] w-[22px] rounded bg-[#eec643]"></span>Meditech System
+                    </div>
                     <h1
-                        class="mt-[18px] max-w-[340px] font-['Plus_Jakarta_Sans'] text-[clamp(27px,3vw,36px)] font-bold leading-[1.25] tracking-[-1.1px]">
+                        class="mt-[18px] max-w-[340px] font-heading text-[clamp(27px,3vw,36px)] font-bold leading-[1.25] tracking-[-1.1px]">
                         Kelola operasional bisnis dalam satu sistem.</h1>
                     <p class="mt-[14px] max-w-[335px] text-[13px] leading-[1.8] text-white/75">Akses proses penjualan,
                         keuangan, persediaan, dan pengelolaan data perusahaan melalui satu platform terintegrasi.</p>
@@ -79,7 +75,8 @@
                         class="h-[37px] w-[51px] rounded-md bg-white object-contain">
                     <div>
                         <div class="font-heading text-[20px] leading-7 font-bold tracking-[-0.5px]"><span
-                                class="text-secondary-500">Medi</span><span class="text-primary-500">Tech</span></div>                        <div class="text-[9px] font-bold uppercase tracking-[1.6px] text-neutral-500">Business System
+                                class="text-secondary-500">Medi</span><span class="text-primary-500">Tech</span></div>
+                        <div class="text-[9px] font-bold uppercase tracking-[1.6px] text-neutral-500">Business System
                         </div>
                     </div>
                 </div>
@@ -88,7 +85,7 @@
                     <div class="text-[10px] font-extrabold uppercase tracking-[1.45px] text-[#0d21a1]">Business
                         Operations</div>
                     <h2
-                        class="mt-[9px] font-['Plus_Jakarta_Sans'] text-[27px] font-extrabold leading-tight tracking-[-0.8px] text-[#171717]">
+                        class="mt-[9px] font-heading text-[27px] font-extrabold leading-tight tracking-[-0.8px] text-[#171717]">
                         Selamat datang kembali</h2>
                     <p class="mt-[7px] text-[12px] text-[#737373]">Masuk menggunakan akun Meditech yang telah terdaftar.
                     </p>
