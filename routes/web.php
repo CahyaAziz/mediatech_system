@@ -12,6 +12,10 @@ Route::domain($publicHost)->group(function () {
 
 // Internal app subdomain - dashboard & operations (auth required)
 Route::domain($internalHost)->group(function () {
+    Route::get('/', function () {
+        return redirect('/login');
+    });
+
     require __DIR__ . "/app.php";
     require __DIR__ . "/auth.php";
 });
@@ -20,4 +24,3 @@ Route::domain($internalHost)->group(function () {
 Route::get("/", function () use ($publicHost) {
     return redirect("http://" . $publicHost . "/");
 })->name("home.redirect");
-
