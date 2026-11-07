@@ -6,15 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Dashboard') | Meditech</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
 </head>
 
-<body class="min-h-screen overflow-x-hidden bg-[#f7f8fb] font-['Plus_Jakarta_Sans'] text-[#262626] antialiased">
+<body class="min-h-screen overflow-x-hidden bg-[#f7f8fb] font-sans text-neutral-800 antialiased">
     <div class="min-h-screen">
         <svg class="absolute h-0 w-0 overflow-hidden" aria-hidden="true" focusable="false"
             xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +95,7 @@
         {{-- Input, sidebar, konten, dan overlay berada dalam satu level agar peer selector Tailwind bekerja. --}}
         <input id="sidebar-toggle" type="checkbox" class="peer/sidebar-toggle sr-only" aria-label="Toggle navigasi">
         <x-admin.sidebar-admin />
-        <div class="flex min-h-screen min-w-0 flex-col min-[721px]:ml-[248px]">
+        <div class="flex min-h-screen min-w-0 flex-col min-[768px]:ml-[248px]">
             <x-admin.navbar-admin />
             <main
                 class="mx-auto w-full max-w-[1600px] min-w-0 flex-1 px-[14px] pb-10 pt-[22px] sm:px-[22px] sm:pt-[27px] xl:px-[30px]">
@@ -128,7 +124,7 @@
             </main>
         </div>
         <label for="sidebar-toggle"
-            class="fixed inset-0 z-30 hidden cursor-pointer bg-[#111827]/40 peer-checked/sidebar-toggle:block min-[721px]:hidden"
+            class="fixed inset-0 z-30 hidden cursor-pointer bg-[#111827]/40 peer-checked/sidebar-toggle:block min-[768px]:hidden"
             aria-label="Tutup navigasi"></label>
     </div>
     @stack('scripts')

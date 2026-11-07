@@ -40,8 +40,8 @@
                         class="h-[42px] w-[60px] rounded-[7px] bg-white object-contain p-[2px]">
                     <div>
                         <div
-                            class="font-['Plus_Jakarta_Sans'] text-[22px] font-extrabold leading-tight tracking-[-0.8px]">
-                            <span class="text-white">Medi</span><span class="text-[#eec643]">Tech</span></div>
+                            class="font-heading text-[20px] leading-7 font-bold tracking-[-0.5px]">
+                            <span class="text-secondary-500">Medi</span><span class="text-primary-500">Tech</span></div>
                         <div class="mt-1 text-[10px] font-bold uppercase tracking-[1.8px] text-white/65">Business System
                         </div>
                     </div>
@@ -78,9 +78,8 @@
                     <img src="{{ asset('images/meditech-logo.jpg') }}" alt="Logo Meditech"
                         class="h-[37px] w-[51px] rounded-md bg-white object-contain">
                     <div>
-                        <div class="font-['Plus_Jakarta_Sans'] text-xl font-extrabold tracking-tight"><span
-                                class="text-[#0d21a1]">Medi</span><span class="text-[#eec643]">Tech</span></div>
-                        <div class="text-[9px] font-bold uppercase tracking-[1.6px] text-[#737373]">Business System
+                        <div class="font-heading text-[20px] leading-7 font-bold tracking-[-0.5px]"><span
+                                class="text-secondary-500">Medi</span><span class="text-primary-500">Tech</span></div>                        <div class="text-[9px] font-bold uppercase tracking-[1.6px] text-neutral-500">Business System
                         </div>
                     </div>
                 </div>
