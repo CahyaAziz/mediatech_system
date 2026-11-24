@@ -49,4 +49,9 @@ class BankAccount extends Model
     {
         return $this->belongsTo(User::class, 'deleted_by', 'user_id');
     }
+
+    public function scopeActive(Builder $query): Builder
+    {
+        return $query->where('is_active', true);
+    }
 }
