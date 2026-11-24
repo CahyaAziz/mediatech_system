@@ -8,4 +8,5 @@ Route::middleware(['auth', 'active'])->group(function () {
 
     require __DIR__ . '/admin.php';
     require __DIR__ . '/finance.php';
+    require __DIR__ . '/master-data.php';
 });

@@ -90,6 +90,39 @@
                 <symbol id="i-download" viewBox="0 0 24 24">
                     <path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14"></path>
                 </symbol>
+                <symbol id="i-user" viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4" fill="currentColor" fill-opacity=".14"></circle>
+                    <path d="M4.5 20c0-4 3.4-6.5 7.5-6.5s7.5 2.5 7.5 6.5"></path>
+                </symbol>
+                <symbol id="i-handshake" viewBox="0 0 24 24">
+                    <path d="m3 12 4-4 4 2 3-2 4 4v4l-4 4-3-1-2 1-6-5z" fill="currentColor" fill-opacity=".14">
+                    </path>
+                    <path d="m8 15 2 2M11 14l2 2"></path>
+                </symbol>
+                <symbol id="i-tag" viewBox="0 0 24 24">
+                    <path d="M3 12V4h8l10 10-8 8z" fill="currentColor" fill-opacity=".14"></path>
+                    <circle cx="7.5" cy="8.5" r="1.3"></circle>
+                </symbol>
+                <symbol id="i-building" viewBox="0 0 24 24">
+                    <path d="M3 10 12 4l9 6v10H3z" fill="currentColor" fill-opacity=".14"></path>
+                    <path d="M8 20v-6h8v6"></path>
+                </symbol>
+                <symbol id="i-bank" viewBox="0 0 24 24">
+                    <path d="M3 9.5 12 4l9 5.5M5 10v7M9.5 10v7M14.5 10v7M19 10v7M3 20h18"></path>
+                </symbol>
+                <symbol id="i-edit" viewBox="0 0 24 24">
+                    <path d="M4 20h4L19 9a2.1 2.1 0 0 0-4-4L4 16z" fill="currentColor" fill-opacity=".14"></path>
+                    <path d="m13.5 6.5 4 4"></path>
+                </symbol>
+                <symbol id="i-trash" viewBox="0 0 24 24">
+                    <path d="M4 7h16M9 7V4h6v3M6.5 7l1 13h9l1-13M10 11v5M14 11v5"></path>
+                </symbol>
+                <symbol id="i-power" viewBox="0 0 24 24">
+                    <path d="M12 3v8M6.5 6.5a8 8 0 1 0 11 0"></path>
+                </symbol>
+                <symbol id="i-check" viewBox="0 0 24 24">
+                    <path d="m5 12.5 4.5 4.5L19 7.5"></path>
+                </symbol>
             </defs>
         </svg>
         {{-- Input, sidebar, konten, dan overlay berada dalam satu level agar peer selector Tailwind bekerja. --}}

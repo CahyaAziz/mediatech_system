@@ -1,0 +1,5 @@
+@include('master-data.partials.field', ['name' => 'name', 'label' => 'Nama customer', 'required' => true, 'full' => true, 'maxlength' => 180, 'placeholder' => 'Contoh: SMK Teknologi Nusantara', 'value' => $record->name])
+@include('master-data.partials.field', ['name' => 'industry_sector', 'label' => 'Sektor industri', 'type' => 'select', 'required' => true, 'placeholder' => 'Pilih sektor', 'options' => $sectors, 'value' => $record->industry_sector])
+@include('master-data.partials.field', ['name' => 'phone', 'label' => 'Telepon', 'required' => true, 'maxlength' => 191, 'placeholder' => '021-555-0100', 'value' => $record->phone])
+@include('master-data.partials.field', ['name' => 'address', 'label' => 'Alamat', 'type' => 'textarea', 'required' => true, 'full' => true, 'maxlength' => 191, 'value' => $record->address])
+@include('master-data.partials.field', ['name' => 'email', 'label' => 'Email', 'type' => 'email', 'required' => true, 'full' => true, 'maxlength' => 255, 'placeholder' => 'procurement@instansi.id', 'value' => $record->email])
